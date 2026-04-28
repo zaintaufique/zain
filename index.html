@@ -80,9 +80,6 @@
     .btn-pub    { color: var(--c3); border-color: var(--c3); background: transparent; }
     .btn-pub:hover, .btn-pub.active { background: var(--c3); color: var(--c7); border-color: var(--c3); }
 
-    .btn-news   { color: var(--c2); border-color: var(--c2); background: transparent; }
-    .btn-news:hover, .btn-news.active { background: var(--c2); color: var(--c7); border-color: var(--c2); }
-
     .btn-cv     { color: #fff; border-color: var(--c5); background: var(--c6); }
     .btn-cv:hover { background: var(--c5); border-color: var(--c5); color: #fff; }
 
@@ -125,16 +122,27 @@
       text-transform: uppercase;
       margin-bottom: 12px;
     }
-    .profile-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .profile-links { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
     .profile-links a {
       font-size: 12px;
       color: var(--c6);
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
       border-bottom: 1px solid var(--c4);
       padding-bottom: 1px;
       transition: color 0.15s, border-color 0.15s;
     }
     .profile-links a:hover { color: var(--c5); border-color: var(--c5); }
+    .profile-links a img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      opacity: 0.75;
+      transition: opacity 0.15s;
+    }
+    .profile-links a:hover img { opacity: 1; }
 
     /* ── Divider ── */
     .divider {
@@ -296,10 +304,9 @@
   <!-- ── Top navigation bar ── -->
   <div class="topbar">
     <div class="container">
-      <button class="btn btn-about active" onclick="show('about')">about</button>
-      <button class="btn btn-pub"          onclick="show('pub')">publications</button>
-      <button class="btn btn-news"         onclick="show('news')">news</button>
-      <a      class="btn btn-cv"           href="assets/cv.pdf" target="_blank">cv</a>
+      <button class="btn btn-about active" onclick="show('about')">About</button>
+      <button class="btn btn-pub"          onclick="show('pub')">Publications</button>
+      <a      class="btn btn-cv"           href="assets/cv.pdf" target="_blank">CV</a>
     </div>
   </div>
 
@@ -313,11 +320,10 @@
         <h1>Zain Taufique</h1>
         <div class="role">PhD Researcher · University of Turku</div>
         <div class="profile-links">
-          <a href="mailto:zain.t.316@gmail.com">email</a>
-          <a href="https://github.com/zaintaufique">github</a>
-          <a href="https://scholar.google.ae/citations?user=1kZRMhAAAAAJ&hl=en">scholar</a>
-          <a href="https://dblp.org/pid/255/0174.html">dblp</a>
-          <a href="https://orcid.org/0000-0002-5298-6049">orcid</a>
+          <a href="https://github.com/zaintaufique"><img src="assets/icons/github.png" alt="" />github</a>
+          <a href="https://scholar.google.ae/citations?user=1kZRMhAAAAAJ&hl=en"><img src="assets/icons/scholar.png" alt="" />scholar</a>
+          <a href="https://dblp.org/pid/255/0174.html"><img src="assets/icons/dblp.png" alt="" />dblp</a>
+          <a href="https://orcid.org/0000-0002-5298-6049"><img src="assets/icons/orcid.png" alt="" />orcid</a>
         </div>
       </div>
     </div>
@@ -345,25 +351,30 @@
           My earlier work spans neural signal processing, low-power IC design,
           and approximate computing for wearable biomedical devices.
         </p>
-        <p>
-          You can find my CV <a href="assets/cv.pdf">here</a>.
-        </p>
       </div>
 
       <div class="ping-box">
         <div class="ping-label">ping zain</div>
         <div class="ping-links">
-          <a href="https://scholar.google.ae/citations?user=1kZRMhAAAAAJ&hl=en">scholar</a>
-          <a href="https://github.com/zaintaufique">github</a>
-          <a href="https://dblp.org/pid/255/0174.html">dblp</a>
-          <a href="https://orcid.org/0000-0002-5298-6049">orcid</a>
           <a href="mailto:zain.t.316@gmail.com">email</a>
         </div>
       </div>
+
+      <div class="prompt" style="margin-top:32px;">news</div>
+      <div class="news-entry">
+        <span class="news-date">Mar 2025</span>
+        <span>DATE paper accepted on hierarchical DNN partitioning for distributed inference on heterogeneous edge platforms.</span>
+      </div>
+      <div class="news-entry">
+        <span class="news-date">Jan 2025</span>
+        <span>ICCAD paper accepted on scheduling compound AI systems on heterogeneous mobile edge platforms.</span>
+      </div>
+      <div class="news-entry">
+        <span class="news-date">Oct 2024</span>
+        <span>Presented TANGO at <a href="https://doi.org/10.1109/ICCD63220.2024.00053">IEEE ICCD 2024</a>.</span>
+      </div>
     </div>
   </div>
-
-  <!-- ══════════ PUBLICATIONS ══════════ -->
   <div class="container">
     <div id="panel-pub" class="panel">
       <div class="prompt">cat publications.bib</div>
@@ -484,27 +495,6 @@
           <div class="pub-venue-name">IEEE BioCAS</div>
           <div class="pub-links"><a href="https://ieeexplore.ieee.org/document/8919128">Paper</a></div>
         </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ══════════ NEWS ══════════ -->
-  <div class="container">
-    <div id="panel-news" class="panel">
-      <div class="prompt">tail -n 10 news.log</div>
-
-      <div class="news-entry">
-        <span class="news-date">Mar 2025</span>
-        <span>DATE paper accepted on hierarchical DNN partitioning for distributed inference on heterogeneous edge platforms.</span>
-      </div>
-      <div class="news-entry">
-        <span class="news-date">Jan 2025</span>
-        <span>ICCAD paper accepted on scheduling compound AI systems on heterogeneous mobile edge platforms.</span>
-      </div>
-      <div class="news-entry">
-        <span class="news-date">Oct 2024</span>
-        <span>Presented TANGO at <a href="https://doi.org/10.1109/ICCD63220.2024.00053">IEEE ICCD 2024</a>.</span>
       </div>
 
     </div>
