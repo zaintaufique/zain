@@ -204,6 +204,15 @@
       color: #000;
     }
 
+    /* ── Publication year labels ── */
+    .pub-year-label {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin: 28px 0 12px;
+    }
+
     /* ── Responsive ── */
     @media (max-width: 600px) {
       .header { flex-direction: column-reverse; }
@@ -290,31 +299,60 @@
   </div>
 
   <!-- ── Publications ── -->
-  <h2>selected publications</h2>
-  <div class="pub-list">
+  <h2>publications</h2>
 
-    <div class="paper">
-      <div class="venue-badge">ICCAD</div>
-      <div>
-        <div class="paper-title">Twill: Scheduling Compound AI Systems on Heterogeneous Mobile Edge Platforms</div>
-        <div class="paper-authors">Zain Taufique, Aman Vyas, Antonio Miele, Pasi Liljeberg, Anil Kanduri</div>
-        <div class="paper-venue">In Proceedings of International Conference on Computer-Aided Design (ICCAD), 2025</div>
-        <div class="paper-links">
-          <a href="#">ABS</a>
-          <a href="#">PDF</a>
-        </div>
-      </div>
-    </div>
+  <div class="pub-year-label">2025</div>
+  <div class="pub-list">
 
     <div class="paper">
       <div class="venue-badge">DATE</div>
       <div>
         <div class="paper-title">HiDP: Hierarchical DNN Partitioning for Distributed Inference on Heterogeneous Edge Platforms</div>
-        <div class="paper-authors">Zain Taufique et al.</div>
-        <div class="paper-venue">In Proceedings of Design, Automation and Test in Europe (DATE), 2025</div>
+        <div class="paper-authors">Z Taufique, A Vyas, A Miele, P Liljeberg, A Kanduri</div>
+        <div class="paper-venue">Design, Automation and Test in Europe (DATE)</div>
         <div class="paper-links">
-          <a href="#">ABS</a>
-          <a href="#">PDF</a>
+          <a href="https://doi.org/10.23919/DATE64628.2025.10992692">DOI</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue-badge">ICCAD</div>
+      <div>
+        <div class="paper-title">Twill: Scheduling Compound AI Systems on Heterogeneous Mobile Edge Platforms</div>
+        <div class="paper-authors">Z Taufique, A Vyas, A Miele, P Liljeberg, A Kanduri</div>
+        <div class="paper-venue">IEEE/ACM International Conference on Computer-Aided Design (ICCAD)</div>
+        <div class="paper-links">
+          <a href="https://arxiv.org/abs/2507.00491">Paper</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue-badge">ACM TECS</div>
+      <div>
+        <div class="paper-title">Exploiting Approximation for Run-time Resource Management of Embedded HMPs</div>
+        <div class="paper-authors">Z Taufique, A Kanduri, A Miele, A Rehmani, C Bolchini, N Dutt, P Liljeberg</div>
+        <div class="paper-venue">ACM Transactions on Embedded Computing Systems</div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1145/3723357">DOI</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pub-year-label">2024</div>
+  <div class="pub-list">
+
+    <div class="paper">
+      <div class="venue-badge">J. Sys. Arch.</div>
+      <div>
+        <div class="paper-title">Adaptive Approximate Computing in Edge AI and IoT Applications: A Review</div>
+        <div class="paper-authors">HJ Damsgaard, A Grenier, D Katare, Z Taufique, S Shakibhamedan</div>
+        <div class="paper-venue">Journal of Systems Architecture</div>
+        <div class="paper-links">
+          <a href="https://doi.org/10.1016/j.sysarc.2024.103114">DOI</a>
         </div>
       </div>
     </div>
@@ -323,11 +361,10 @@
       <div class="venue-badge">ICCD</div>
       <div>
         <div class="paper-title">TANGO: Low Latency Multi-DNN Inference on Heterogeneous Edge Platforms</div>
-        <div class="paper-authors">Zain Taufique et al.</div>
-        <div class="paper-venue">In Proceedings of IEEE International Conference on Computer Design (ICCD), 2024</div>
+        <div class="paper-authors">Z Taufique, A Vyas, A Miele, P Liljeberg, A Kanduri</div>
+        <div class="paper-venue">IEEE International Conference on Computer Design (ICCD)</div>
         <div class="paper-links">
-          <a href="#">ABS</a>
-          <a href="#">PDF</a>
+          <a href="https://doi.org/10.1109/ICCD63220.2024.00053">DOI</a>
         </div>
       </div>
     </div>
@@ -336,11 +373,80 @@
       <div class="venue-badge">ASP&#8209;DAC</div>
       <div>
         <div class="paper-title">Adaptive Workload Distribution for Accuracy-Aware DNN Inference on Collaborative Edge Platforms</div>
-        <div class="paper-authors">Zain Taufique et al.</div>
-        <div class="paper-venue">In Proceedings of Asia and South Pacific Design Automation Conference (ASP-DAC), 2024</div>
+        <div class="paper-authors">Z Taufique, A Miele, P Liljeberg, A Kanduri</div>
+        <div class="paper-venue">Asia and South Pacific Design Automation Conference (ASP-DAC)</div>
         <div class="paper-links">
-          <a href="#">ABS</a>
-          <a href="#">PDF</a>
+          <a href="https://doi.org/10.1109/ASP-DAC58780.2024.10473987">DOI</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue-badge">arXiv</div>
+      <div>
+        <div class="paper-title">Characterizing Accuracy Trade-offs of EEG Applications on Embedded HMPs</div>
+        <div class="paper-authors">Z Taufique, MAB Altaf, A Miele, P Liljeberg, A Kanduri</div>
+        <div class="paper-venue">arXiv preprint</div>
+        <div class="paper-links">
+          <a href="https://arxiv.org/abs/2402.09867">Paper</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pub-year-label">2021</div>
+  <div class="pub-list">
+
+    <div class="paper">
+      <div class="venue-badge">IEEE TCAS&#8209;II</div>
+      <div>
+        <div class="paper-title">A Low Power Multi-Class Migraine Detection Processor Based on Somatosensory Evoked Potentials</div>
+        <div class="paper-authors">Z Taufique, B Zhu, G Coppola, M Shoaran, MAB Altaf</div>
+        <div class="paper-venue">IEEE Transactions on Circuits and Systems II</div>
+        <div class="paper-links">
+          <a href="https://ieeexplore.ieee.org/document/9380681">Paper</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue-badge">NORCAS</div>
+      <div>
+        <div class="paper-title">Approximate Feature Extraction for Low Power Epileptic Seizure Prediction in Wearable Devices</div>
+        <div class="paper-authors">Z Taufique, A Kanduri, MAB Altaf, P Liljeberg</div>
+        <div class="paper-venue">IEEE NORCAS</div>
+        <div class="paper-links">
+          <a href="https://ieeexplore.ieee.org/document/9599870">Paper</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper">
+      <div class="venue-badge">A&#8209;SSCC</div>
+      <div>
+        <div class="paper-title">An 8.7 µJ/class FFT Accelerator and DNN-Based Configurable SoC for Multi-Class Chronic Neurological Disorder Detection</div>
+        <div class="paper-authors">Z Taufique, B Zhu, G Coppola, M Shoaran, W Saadeh, MAB Altaf</div>
+        <div class="paper-venue">IEEE Asian Solid-State Circuits Conference (A-SSCC)</div>
+        <div class="paper-links">
+          <a href="https://ieeexplore.ieee.org/document/9634763">Paper</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="pub-year-label">2019</div>
+  <div class="pub-list">
+
+    <div class="paper">
+      <div class="venue-badge">BioCAS</div>
+      <div>
+        <div class="paper-title">An ECG Processor for the Detection of Eight Cardiac Arrhythmias with Minimum False Alarms</div>
+        <div class="paper-authors">MA Sohail, Z Taufique, SM Abubakar, W Saadeh, MAB Altaf</div>
+        <div class="paper-venue">IEEE BioCAS</div>
+        <div class="paper-links">
+          <a href="https://ieeexplore.ieee.org/document/8919128">Paper</a>
         </div>
       </div>
     </div>
